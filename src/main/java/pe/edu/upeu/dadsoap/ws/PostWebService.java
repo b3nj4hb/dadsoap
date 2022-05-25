@@ -4,9 +4,13 @@
  */
 package pe.edu.upeu.dadsoap.ws;
 
+import java.util.List;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import pe.edu.upeu.dadsoap.dao.PostDao;
+import pe.edu.upeu.dadsoap.daoImpl.PostDaoImpl;
+import pe.edu.upeu.dadsoap.model.Post;
 
 /**
  *
@@ -14,9 +18,14 @@ import javax.jws.WebParam;
  */
 @WebService(serviceName = "PostWebService")
 public class PostWebService {
-
+private PostDao dao = new PostDaoImpl();
+    
     @WebMethod(operationName = "hello")
     public String hello(@WebParam(name = "name") String txt) {
         return "Hello " + txt + " !";
+    }
+        @WebMethod(operationName = "readAllPost")
+    public List<Post> readAllPost() {
+        return dao.readAll();
     }
 }
