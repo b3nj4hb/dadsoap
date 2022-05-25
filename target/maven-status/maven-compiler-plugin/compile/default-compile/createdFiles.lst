@@ -4,4 +4,3 @@ pe\edu\upeu\dadsoap\test\Test.class
 pe\edu\upeu\dadsoap\dao\PostDao.class
 pe\edu\upeu\dadsoap\daoImpl\PostDaoImpl.class
 pe\edu\upeu\dadsoap\model\Post.class
-pe\edu\upeu\dadsoap\ws\PostWebService.class

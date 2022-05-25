@@ -19,11 +19,11 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Usuario {
-    public int idusuario;
-    public String username;
-    public String password;
-    public int idpersona;
-    public int idrol;
-    public String fechacreacion;
-    public boolean estado;
+    private int idusuario;
+    private String username;
+    private String password;
+    private int idpersona;
+    private int idrol;
+    private String fechacreacion;
+    private boolean estado;
 }
