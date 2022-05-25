@@ -20,7 +20,8 @@ public class Test {
             System.out.println("No conectado");
         }
             System.out.println(gson.toJson(p.readAll()));
-            //System.out.println(gson.toJson(udao.readAll()));
+            
+            System.out.println(gson.toJson(udao.readAll()));
             //System.out.println(gson.toJson(p.read(1)));
     }
 }

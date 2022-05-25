@@ -24,6 +24,6 @@ public class Usuario {
     public String password;
     public int idpersona;
     public int idrol;
-    public String fecha;
+    public String fechacreacion;
     public boolean estado;
 }
