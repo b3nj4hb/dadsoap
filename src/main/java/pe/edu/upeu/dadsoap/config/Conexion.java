@@ -6,10 +6,10 @@ import java.sql.SQLException;
 
 public class Conexion {
 
-    private static final String URL = "jdbc:postgresql://ec2-54-211-255-161.compute-1.amazonaws.com/d4jqho7u4g1cm8";
+    private static final String URL = "jdbc:postgresql://ec2-34-201-95-176.compute-1.amazonaws.com/df1s2p9kv5ot4p";
     private static final String DRIVER = "org.postgresql.Driver";
-    private static final String PASS = "e9cb0b02098df2e001ea7ebd6ac4e7ccbd7d61105c71c64bd81249806cd57164";
-    private static final String USER = "hfpxlcrtixfojk";
+    private static final String PASS = "504be79431768462db829c50fe9b8ea220df44b9fda3bcede0fa2d76960384d0";
+    private static final String USER = "oyeisgczawbfza";
     private static Connection cx = null;
 
     public static Connection getConexion() {

@@ -39,13 +39,32 @@ public class PostDaoImpl implements PostDao {
     @Override
     public int update(Post post) {
         int x = 0;
-
+        String SQL = "update post set titulo=?, descripcion=? where idpost=?";
+        try {
+            cx = Conexion.getConexion();
+            ps = cx.prepareStatement(SQL);
+            ps.setString(1, post.getTitulo());
+            ps.setString(2, post.getDescripcion());
+            ps.setInt(3, post.getIdpost());
+            x = ps.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("Error: " + e);
+        }
         return x;
     }
 
     @Override
     public int delete(int id) {
         int x = 0;
+        String SQL = "delete from post where idpost=?";
+        try {
+            cx = Conexion.getConexion();
+            ps = cx.prepareStatement(SQL);
+            ps.setInt(1, id);
+            x = ps.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("Error: " + e);
+        }
         return x;
     }
 
@@ -87,7 +106,6 @@ public class PostDaoImpl implements PostDao {
         } catch (SQLException e) {
             System.out.println("Error: " + e);
         }
-
         return lista;
     }
 

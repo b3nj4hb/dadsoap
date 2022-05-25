@@ -19,7 +19,7 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Post {
-    private int idpost;
-    private String titulo;
-    private String descripcion;
+    public int idpost;
+    public String titulo;
+    public String descripcion;
 }
